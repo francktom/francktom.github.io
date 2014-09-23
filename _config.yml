@@ -8,6 +8,39 @@ description: My Personal Site/Blog
 author:
   name: Raoul DIFFOUO
   email: diraulo@gmail.com
+  email_md5: 608eda1753a268741c7d46efa337ffa2
+  bio: Web Developer - Robotic Hobbyist
+  contact:
+    basic:
+      website: diraulo.me
+      email: hello@diraulo.me
+      email_txt: hello[at]diraulo[dot]me
+      phone: +27 (0) 12 341 7228
+      mobile: +27 (0) 71 071 5114
+    social:
+      github: diraulo
+      twitter: diraulo
+      linkedin: diraul
+  skills:
+    - name: AngularJS
+      level: 60
+    - name: HTML5 & CSS3
+      level: 90
+    - name: Javascript
+      level: 70
+    - name: NodeJS
+      level: 55
+    - name: Ruby
+      level: 65
+    - name: Ruby on Rails
+      level: 50
+  portfolio:
+    - name: ASE House4Hack Roadshow
+      url: http://aseroadshow.house4hack.co.za/
+      thumbnail: aseroadshow
+    - name: Yummygraphs
+      url: http://www.yummygraphs.co.za/
+      thumbnail: yummy.png
 
 # Grunt handles images and assets.
 exclude: ['img', 'css', 'js', 'fonts',
