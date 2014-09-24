@@ -1,0 +1,111 @@
+---
+layout: default
+title: Welcome
+---
+<div class="container">
+  <div class="col-lg-6 col-lg-offset-3">
+    <div class="row w">
+      <div class="col-md-4">
+        <img class="img-responsive" src="http://www.gravatar.com/avatar/{{site.author.email_md5}}?s=800" alt="">
+        <ul class="nav nav-tabs nav-stacked" id="myTab">
+          <li class="active"><a href="#about">About</a></li>
+          <li><a href="#profile">Profile</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-8">
+        <div class="tab-content">
+          <!-- ===== First Tab - About Me ===== -->
+          <div class="tab-pane active" id="about">
+            <h3>{{site.author.name}}</h3>
+            <h5>{{site.author.bio}}</h5>
+            <hr>
+            <p>I'm a Web Developer with 1 year of experience</p>
+            <p>I've built websites for local businesses, developed complex web applications using technologies including but not limited to AngularJS, NodeJS, MongoDB, Sinatra, etc.</p>
+            <p>On my spare time I like to play with Robots, Arduino and build cool electronic projects.</p>
+            <p class="pull-right sm-1">
+              <span class="octicon octicon-code"></span> with
+              <a target="_blank" href="http://jekyllrb.com">Jekyll</a>. Hosted on &nbsp;
+              <span class="octicon octicon-logo-github"></span>
+            </p>
+          </div><!-- tab about -->
+
+          <!-- ===== Second Tab - My Profile ===== -->
+          <div class="tab-pane" id="profile">
+            <h4><i class="fa fa-briefcase"></i> Job Experience</h4>
+            <p class="sm-1">
+              <a href="http://www.microsmart.co.za"><grey>Microsmart</grey></a> | November 2013 - Actual.<br/>
+              <a href="http://www.geekulcha.com"><grey>Geekulcha</grey></a> | October 2013 - Actual.<br/>
+            </p>
+
+            <h4><i class="fa fa-graduation-cap"></i> Education</h4>
+            <p class="sm-1">
+              <grey>Computer Engineering</grey> | Tshwane University of Technology.<br/>
+            </p>
+
+            <h4><i class="fa fa-trophy"></i> Certifications</h4>
+            <p class="sm-1">
+              <grey>CS169.1x Engineering Software as a Service</grey> | edX.<br/>
+              <grey>An Introduction to Interactive Programming in Python</grey> | Coursera.<br/>
+            </p>
+
+            <h4><i class="fa fa-tasks"></i> Skills</h4>
+            <div class="row padding-bottom-40">
+              {% for skill in site.author.skills %}
+              <div class="col-xs-6">
+                <p class="sm-skills">
+                  {{ skill.name }}
+                </p>
+                <div class="progress progress-xxs">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="{{ skill.level }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ skill.level }}%;"></div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div><!-- Tab Profile -->
+
+          <!-- ===== Third Tab ===== -->
+          <div class="tab-pane" id="portfolio">
+            <div class="row">
+              <div class="col-xs-6 centered">
+                <img class="img-responsive" src="img/yummy.png" alt="">
+                <a href="http://www.yummygraphs.co.za/" target="_blank"><h6><i class="fa fa-link"></i> Yummygraphs</h6></a>
+              </div>
+              <div class="col-xs-6 centered">
+                <img class="img-responsive" src="img/aseh4h.png" alt="">
+                <a href="http://aseroadshow.house4hack.co.za/" target="_blank"><h6><i class="fa fa-link"></i> ASE House4Hack Roadshow</h6></a>
+              </div>
+            </div>
+          </div><!-- /Tab Portfolio -->
+
+          <div class="tab-pane" id="contact">
+            <h4 class="text-center">Contact Information</h4>
+            <hr>
+            <div class="row">
+              <div class="col-xs-12">
+                <p class="sm text-center">
+                  <i class="fa fa-globe"></i> <a href="http://{{site.author.contact.basic.website}}">{{site.author.contact.basic.website}}</a> <br/>
+                  <i class="fa fa-envelope"></i> <a href="mailto:{{site.author.contact.basic.email}}?subject=Hello%20Raoul">{{site.author.contact.basic.email_txt}}</a> <br/>
+                  <i class="fa fa-phone"></i> {{site.author.contact.basic.phone}} <br/>
+                  <i class="fa fa-apple"></i> {{site.author.contact.basic.mobile}}
+                </p>
+              </div>
+            </div>
+
+            <h4 class="text-center">Social Links</h4>
+            <hr>
+            <div class="row">
+              <div class="col-xs-12 text-center" id="social">
+                <a href="https://github.com/{{site.author.contact.social.github}}" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://twitter.com/{{site.author.contact.social.twitter}}" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://za.linkedin.com/in/{{site.author.contact.social.linkedin}}" target="_blank" ><i class="fa fa-linkedin"></i></a>
+              </div><!-- col-xs-6 -->
+            </div><!-- row -->
+          </div><!-- Tab Contact -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
