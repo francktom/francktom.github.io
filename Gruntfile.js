@@ -257,6 +257,12 @@ module.exports = function (grunt) {
           commit: true,
           push: true
         }
+      },
+      pages: {
+        options: {
+          remote: 'git@github.com:diraulo/diraulo.github.io.git',
+          branch: 'gh-pages'
+        }
       }
     },
     jshint: {
