@@ -72,3 +72,4 @@ markdown: kramdown
 #     coderay_css: style
 
 pygments: true
+ga: UA-49304711-1
